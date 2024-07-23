@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../../src/index.css";
+import Login from "./Login";
 
 export default function Navbar() {
   const [theme, setTheme] = useState(
@@ -143,9 +144,15 @@ export default function Navbar() {
               </svg>
             </label>
             <div className="">
-              <a className="bg-black text-white cursor-pointer px-3 py-2 rounded-md hover:bg-slate-800 duration-300">
+              <a
+                className="bg-black text-white cursor-pointer px-3 py-2 rounded-md hover:bg-slate-800 duration-300"
+                onClick={() =>
+                  document.getElementById("my_modal_3").showModal()
+                }
+              >
                 Login
               </a>
+              <Login />
             </div>
           </div>
         </div>

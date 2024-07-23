@@ -1,4 +1,5 @@
 // import Course from "./components/Course";
+import SignUp from "./components/SignUp";
 import Courses from "./courses/Courses";
 import Home from "./home/Home";
 import "./index.css";
@@ -11,6 +12,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/course" element={<Courses />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </div>
     </>
