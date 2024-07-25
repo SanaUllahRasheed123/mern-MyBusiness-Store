@@ -1,3 +1,5 @@
+// import { useForm } from "react-hook-form";
+
 import { Link } from "react-router-dom";
 
 export default function Login() {
@@ -8,9 +10,12 @@ export default function Login() {
           <div className="modal-box">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
-              <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+              <Link
+                to="/"
+                className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+              >
                 ✕
-              </button>
+              </Link>
             </form>
             <h3 className="font-bold text-lg">Login</h3>
             {/* Email */}
@@ -36,9 +41,11 @@ export default function Login() {
             </div>
             {/* Button */}
             <div className="flex justify-around">
-              <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
-                Login
-              </button>
+              <input
+                type="submit"
+                className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200"
+              />
+              Login
               <p>
                 Not Registered Yet?{" "}
                 <Link
